@@ -1,0 +1,74 @@
+.navbar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 9.8rem;
+  width: calc(100% - 36.7rem);
+  transition: all 0.3s;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid #cfcfcf;
+  padding: 0.5rem 3rem;
+  background-color: $color-navbar;
+  grid-gap: 0 1rem;
+
+  @media only screen and (max-width: $tab-land) {
+    width: 100%;
+  }
+  &__left {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0 2rem;
+  }
+
+  &__imgarea {
+    max-height: 5.5rem;
+    max-width: 5.5rem;
+    border-radius: 0.4rem;
+    // border: 1px solid $color-navbar;
+    box-shadow: rgba(0, 0, 0, 0.384) 2.4px -2.6px 12.2px;
+
+    img {
+      @include img-size;
+      border-radius: 0.4rem;
+    }
+  }
+
+  &__title {
+  }
+
+  &__right {
+    justify-self: end;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 1.5rem;
+
+    .btn {
+      padding: 0;
+    }
+    svg {
+      @include icon-vector;
+    }
+
+    .icon-shuffle {
+      width: 1.9rem;
+      height: 1.4rem;
+      fill: #8e8e92;
+    }
+    .icon-playback {
+      width: 3.1rem;
+      height: 1.8rem;
+      fill: $color-black;
+    }
+    .icon-player {
+      width: 3.1rem;
+      height: 2.8rem;
+      fill: $color-black;
+    }
+  }
+}

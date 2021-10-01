@@ -1,0 +1,15 @@
+.btn {
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: capitalize;
+
+  svg {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+.btn-text {
+  color: $color-primary;
+  font-size: 1.7rem;
+}
